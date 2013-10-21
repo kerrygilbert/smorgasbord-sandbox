@@ -9,19 +9,16 @@ This is the first iteration. I will eventually break the express app part of thi
 
 ```
 git clone https://github.com/colpanik/smorgasbord.git
-
 ```
 
 ```
 cd smorgasbord
 npm install
-
 ```
 
 ```
 cd smorgasbord
 node app.js
-
 ```
 
 In your browser:
