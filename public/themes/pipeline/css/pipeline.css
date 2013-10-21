@@ -28,6 +28,10 @@ a {
   background-color: white;
   color: #777;
 }
-.btn:active {
+.btn.playing {
   opacity: 1;
+  background-color: white;
+}
+.btn:not(.playable) {
+  opacity: 0.3;
 }

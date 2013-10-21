@@ -32,8 +32,13 @@ a {
     background-color: white;
     color: #777;
   }
-  &:active
+  &.playing
   {
     opacity: 1;
+    background-color: white;
+  }
+  &:not(.playable)
+  {
+    opacity: 0.3;
   }
 }
