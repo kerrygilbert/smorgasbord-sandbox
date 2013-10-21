@@ -5,11 +5,14 @@ module.exports = function(req, res) {
     var sounds = [];
 
     files.forEach(function(file){
-      var soundName = file.split('.')[0];
-      var sound = {};
-      sound.path = file;
-      sound.name = soundName;
-      sounds.push(sound);
+      if(file[0] !== '.') {
+        var soundName = file.split('.')[0];
+        var sound = {};
+        sound.path = file;
+        sound.name = soundName;
+        sounds.push(sound);
+      }
+
     });
 
     res.render('index.html', { 
