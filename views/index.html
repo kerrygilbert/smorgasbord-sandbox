@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block bodyclass %}home{% endblock %}
+
+{% block main %}
+  <div class="sounds">
+    {% for sound in sounds %}
+      <audio data-id="{{ sound.name }}" src="./sounds/{{ sound.path }}" preload="true"></audio>
+      <div class="btn" id="{{ sound.name }}">{{ sound.name }}</div>
+    {% endfor %}
+  </div>
+{% endblock %}
