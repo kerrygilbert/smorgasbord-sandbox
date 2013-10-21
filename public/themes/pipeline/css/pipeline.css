@@ -25,12 +25,9 @@ a {
 }
 .btn:hover {
   opacity: 0.7;
-  background-color: white;
-  color: #777;
 }
 .btn.playing {
-  opacity: 1;
-  background-color: white;
+  opacity: 0.8;
 }
 .btn:not(.playable) {
   opacity: 0.3;
