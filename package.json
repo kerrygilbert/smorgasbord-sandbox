@@ -1,7 +1,7 @@
 {
-  "name": "docs",
+  "name": "smorgasbord",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "node app"
   },
@@ -12,5 +12,23 @@
     "less-middleware": "*",
     "mongoose": "3.4.x",
     "async": "*"
+  },
+  "description": "smorgasbord ===========",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colpanik/smorgasbord.git"
+  },
+  "keywords": [
+    "audio",
+    "sample",
+    "sampling",
+    "soundboard"
+  ],
+  "author": "Kerry Gilbert <kerry@punkave.com> (http://punkave.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/colpanik/smorgasbord/issues"
   }
 }
