@@ -1,9 +1,3 @@
-$(function(){
-  $('audio').bord({
-
-  });
-});
-
 $.fn.bord = function(userOptions) {
   var audios = this;
   var options = userOptions || {};
@@ -57,4 +51,3 @@ $.fn.bord = function(userOptions) {
     btn.addClass('playing');
   }
 }
-

@@ -5,8 +5,15 @@
 {% block main %}
   <div class="sounds">
     {% for sound in sounds %}
+      <audio data-id="{{ sound.name }}" src="sounds/{{ sound.path }}" preload="auto"></audio>
+
+
+    {% endfor %}
+  </div>
+{% endblock %}
+
       <div class="sound-container">
-        <audio data-id="{{ sound.name }}" src="./sounds/{{ sound.path }}" preload="auto"></audio>
+        <audio data-id="{{ sound.name }}" src="sounds/{{ sound.path }}" preload="auto"></audio>
         <div class="btn s-{{loop.index}}" id="{{ sound.name }}">
           {{ sound.name }}
           {# 789456123 #}
@@ -16,6 +23,3 @@
         </div>
         loop:<input class="toggle-loop" type="checkbox" name="loop">
       </div>
-    {% endfor %}
-  </div>
-{% endblock %}
