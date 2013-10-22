@@ -7,7 +7,13 @@
     {% for sound in sounds %}
       <div class="sound-container">
         <audio data-id="{{ sound.name }}" src="./sounds/{{ sound.path }}" preload="auto"></audio>
-        <div class="btn s-{{loop.index}}" id="{{ sound.name }}">{{ sound.name }}</div>
+        <div class="btn s-{{loop.index}}" id="{{ sound.name }}">
+          {{ sound.name }}
+          {# 789456123 #}
+          {% if loop.index < 11 %}
+            <span class="index">{{ loop.index }}</span>
+          {% endif %}
+        </div>
         loop:<input class="toggle-loop" type="checkbox" name="loop">
       </div>
     {% endfor %}

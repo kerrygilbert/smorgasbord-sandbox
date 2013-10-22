@@ -40,5 +40,12 @@ $(function(){
   });
 
 
+  window.onkeypress = function(e) {
+    var key = e.keyCode ? e.keyCode : e.which;
+    if(key < 58 && key > 48) {
+      $('.btn.s-'+(key-48)).trigger('click');
+    }
+  }
+
 
 });
