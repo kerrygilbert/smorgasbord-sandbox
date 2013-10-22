@@ -17,9 +17,16 @@ $.fn.bord = function(userOptions) {
     that.removeAttr('controls');
     var control = '<div class="smorgas btn s-'+(index+1)+'" id="'+id+'">'+id+'</div>';
     $(control).appendTo(that.parent()).wrap('<div class="sound-container"></div>');
+    var btn = $('.btn#'+id);
 
-    $('.btn#'+id).on('click', function(event){
-      console.log('fkjhf')
+    if(options.loopable) {
+      btn.parent().append('<input class="toggle-loop" type="checkbox" name="loop">');
+      btn.parent().find('input').on('change', function(){
+        btn.toggleClass('loops');
+      });
+    }
+
+    btn.on('click', function(event){
       if($(this).hasClass('playing')) {
         stopSound($(this), sound);
       } else {
@@ -50,4 +57,14 @@ $.fn.bord = function(userOptions) {
     sound.play();
     btn.addClass('playing');
   }
+
+  if(options.keyboard) {
+    window.onkeydown = function(event){
+      var key = event.which;
+      if(key < 58 && key > 47) {
+        $('.btn.s-'+(key-48)).trigger('click');
+      } 
+    }
+  }
 }
+

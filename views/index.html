@@ -5,9 +5,7 @@
 {% block main %}
   <div class="sounds">
     {% for sound in sounds %}
-      <audio data-id="{{ sound.name }}" src="sounds/{{ sound.path }}" preload="auto"></audio>
-
-
+      <audio src="sounds/{{ sound.path }}" preload="auto"></audio>
     {% endfor %}
   </div>
 {% endblock %}
