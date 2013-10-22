@@ -23,8 +23,22 @@ $(function(){
       sound.currentTime = 0;
       btn.removeClass('playing')
     } else {
+      $(sound).removeAttr('loop');
+      if(btn.hasClass('loops')) {
+        $(sound).attr('loop',true)
+      }
       sound.play();
       btn.addClass('playing');
     }
   });
+
+  $('input.toggle-loop').on('change', function(){
+    $(this).parent().find('.btn').toggleClass('loops');
+    $(this).parent().find('.btn').removeClass('playing')
+    $(this).parent().find('audio').get(0).pause();
+    $(this).parent().find('audio').get(0).currentTime = 0;
+  });
+
+
+
 });

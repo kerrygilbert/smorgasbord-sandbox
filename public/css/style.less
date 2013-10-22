@@ -7,15 +7,26 @@ a {
   color: #00B7FF;
 }
 
-.btn
+.sound-container
 {
   float: left;
+  margin: 10px;
+  width: 100px;
+
+  &.loops
+  {
+    background: blue;
+  }
+}
+
+.btn
+{
   width: 100px;
   height: 100px;
   text-align: center;
   background: #ccc;
   line-height: 100px;
-  margin: 10px;
+  
   cursor: pointer;
 
   overflow: hidden;
@@ -34,4 +45,14 @@ a {
 .btn.playing
 {
   background: red;
+}
+
+.btn.loops
+{
+  background: purple;
+}
+
+.btn.looping
+{
+  background: blue;
 }
